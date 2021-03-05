@@ -4,8 +4,8 @@
   <title>바리스타요셉 이야기</title>
   <script type="text/javascript">
     target_url = "https://www.jospeh.net";
-    param1 = location.search;
-    param2 = window.location.pathname.split("/");    
+    pathname = window.location.pathname.split("/");    
+    
     // location.href=target_url+"/83";
     
   </script>  
@@ -13,7 +13,7 @@
 <body>
   <!-- www.jospeh.net 으로 자동 연결 됩니다. -->
   <script language="javascript">
-      document.write('pathname = ' + param2[1]);
+      document.write('pathname = ' + pathname[1]);
   </script>
 </body>
 </html>
