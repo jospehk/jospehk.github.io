@@ -11,7 +11,11 @@
   <meta name="NaverBot" content="index,follow"/> 
   <meta name="Yeti" content="All"/> 
   <meta name="Yeti" content="index,follow"/>
-  <script type="text/javascript">location.href="https://www.jospeh.net";</script>  
+  <script type="text/javascript">
+    url = window.location.href;
+    target_url = "https://www.jospeh.net" + url;
+    location.href=target_url;
+  </script>  
 </head>
 <body>
   <!-- www.jospeh.net 으로 자동 연결 됩니다. -->
