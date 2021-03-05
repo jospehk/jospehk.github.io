@@ -2,7 +2,10 @@
 <html lang="ko">
 <head>
   <title>Parameter Check</title>
-  <script type="text/javascript">document.write("파라미터 확인 " + url);</script>
+  <script type="text/javascript">
+    if(!url) url=window.location.href;
+    document.write("파라미터 확인 " + url);
+  </script>
 </head>
 <body>
   <!-- Parameter Check -->
