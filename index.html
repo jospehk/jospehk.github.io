@@ -2,7 +2,6 @@
 <html lang="ko">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Redirection</title>
     <link rel="canonical" href="https://www.jospeh.net"> <!-- 1. 표준 도메인지정 -->
     <script type='text/javascript'> 
@@ -20,9 +19,9 @@
             var href = origin + "/" + pathname[1];
             var destination = href.replace(origin, dest); // 6. 접속한 도메인정보를 옮겨갈 새로운 도메인 주소로 치환 
             
-            // document.write('href =' + href + "<br />");
-            // document.write('origin =' + origin + "<br />");
-            // document.write('destination = ' + destination + "<br />");
+            document.write('href =' + href + "<br />");
+            document.write('origin =' + origin + "<br />");
+            document.write('destination = ' + destination + "<br />");
                 
             // location.href = destination; // 7. 이동 
         } 
