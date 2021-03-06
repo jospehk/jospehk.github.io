@@ -18,8 +18,16 @@
         { 
             var origin = location.origin; // 4. 접속한 정보에서 도메인정보를 확보 
             var href = location.href; // 5. 접속한 정보에서 도메인이 포함된 포스트 주소를 확보 
+            pathname = window.location.pathname.split("/");    
+            // location.href = target_url + "/" + pathname[1];            
             var destination = href.replace(origin, dest); // 6. 접속한 도메인정보를 옮겨갈 새로운 도메인 주소로 치환 
-            location.href = destination; // 7. 이동 
+            
+            document.write('href =' + href + "<br />");
+            document.write('origin =' + origin + "<br />");
+            document.write('destination = ' + destination + "<br />");
+            
+                
+            // location.href = destination; // 7. 이동 
         } 
         
         // 실행 
