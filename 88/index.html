@@ -1,16 +1,37 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-  <title>바리스타요셉 이야기</title>
-  <script type="text/javascript">
-    target_url = "https://www.jospeh.net";
-    location.href=target_url+"/88";
-    
-    param1 = location.search;
-    param2 = window.location.pathname;    
-  </script>  
-</head>
-<body>
-  <!-- www.jospeh.net 으로 자동 연결 됩니다. -->
-</body>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Redirection</title>
+    <link rel="canonical" href="https://www.jospeh.net"> <!-- 1. 표준 도메인지정 -->
+    <script type='text/javascript'> 
+        var dest = "https://www.jospeh.net"; // 2. 옮겨갈 새로운 도메인 지정 
+        function canonicalLink() { 
+            var link = document.getElementsByTagName("link")[0]; 
+            link.setAttribute('href', dest + location.pathname); 
+            document.head.appendChild(link); // 3. 포스트 주소가 포함된 canonical을 지정함 
+        } 
+        
+        function domainRedirect() { 
+            var origin = location.origin; // 4. 접속한 정보에서 도메인정보를 확보 
+            var pathname = window.location.pathname.split("/");  // 5. 접속한 정보에서 포스트 주소를 확보 
+            var href = origin + "/" + pathname[1];
+            var destination = href.replace(origin, dest); // 6. 접속한 도메인정보를 옮겨갈 새로운 도메인 주소로 치환 
+            
+            // document.write('href =' + href + "<br />");
+            // document.write('origin =' + origin + "<br />");
+            // document.write('destination = ' + destination + "<br />");
+                
+            location.href = destination; // 7. 이동 
+        } 
+        
+        // 실행 
+        canonicalLink(); 
+        domainRedirect(); 
+    </script> 
+    </head> 
+    <body>
+        <!-- Redirection -->
+    </body> 
 </html>
