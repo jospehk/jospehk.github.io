@@ -1,12 +1,16 @@
 <!DOCTYPE html>
+<script type="text/javascript">
+	var referrer = document.referrer;
+</script>
 <html lang="ko">
     <head>
-    <title>Redirection to www.jospeh.net</title>
+    <title><script language="javascript">document.write(referer);</script></title>
     <!-- 표준 도메인 canonical link 지정 -->
     <link rel="canonical" href="https://www.jospeh.net/34">
     <script type="text/javascript">
         // 리디렉션
-        location.href="http://www.jospeh.net/34";
+        // location.href="http://www.jospeh.net/34";
+		document.write('referrer = ' + referer);
     </script>
     </head>
     <body>
