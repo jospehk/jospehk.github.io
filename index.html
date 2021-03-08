@@ -1,24 +1,15 @@
 <!DOCTYPE html>
 <html lang="ko">
-<head>
-    <meta charset="UTF-8">
-    <title>302 Redirection for www.jospeh.net</title>
+    <head>
+    <title>Redirection to www.jospeh.net</title>
+    <!-- 표준 도메인 canonical link 지정 -->
     <link rel="canonical" href="https://www.jospeh.net">
-    <script type='text/javascript'> 
-
-        var dest = "https://www.jospeh.net";
-        
-        function canonicalLink() { 
-            var link = document.getElementsByTagName("link")[0]; 
-            link.setAttribute('href', dest + location.pathname); 
-            document.head.appendChild(link);
-        } 
-        
-        canonicalLink(); 
-        location.href = dest;
-    </script> 
-    </head> 
+    <script type="text/javascript">
+        // 리디렉션
+        location.href="http://www.jospeh.net";
+    </script>
+    </head>
     <body>
-        <!-- 302 Redirection for www.jospeh.net -->
-    </body> 
+        <!-- Redirection to www.jospet.net -->
+    </body>
 </html>
