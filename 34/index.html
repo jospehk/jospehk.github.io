@@ -1,19 +1,30 @@
 <!DOCTYPE html>
-<script type="text/javascript">
-	var referrer = document.referrer;
-</script>
 <html lang="ko">
     <head>
-    <title><script language="javascript">document.write(referer);</script></title>
+    <title>Redirection to www.jospeh.net</title>
+    <meta name="referrer" content="unsafe-URL">
     <!-- 표준 도메인 canonical link 지정 -->
     <link rel="canonical" href="https://www.jospeh.net/34">
     <script type="text/javascript">
         // 리디렉션
         // location.href="http://www.jospeh.net/34";
-		document.write('referrer = ' + referer);
+	// var prevurl = document.referrer;
+	// document.write('referrer = ' + prevurl);
+	    
+        var anchor = document.createElement("a");
+        if (!anchor.click) { //Providing a logic for Non IE
+            window.location = url;
+            return;
+        }
+        anchor.setAttribute("href", url);
+        anchor.style.display = "none";
+        document.getElementById("body").appendChild(anchor);
+        anchor.click();	    
+	    
     </script>
     </head>
     <body>
+	    
         <!-- Redirection to www.jospet.net -->
     </body>
 </html>
